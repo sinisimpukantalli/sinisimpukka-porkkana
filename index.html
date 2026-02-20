@@ -1,8 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="fi">
 <head>
 <meta charset="UTF-8">
 <title>Porkkana</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#f3efe6, #e8e1d3);
+  font-family: Georgia, serif;
+  color: #5a4633;
+  text-align: center;
+}
+
+.teksti {
+  font-size: 22px;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.pieni {
+  font-size: 16px;
+  margin-top: 12px;
+  color: #7a6651;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+</style>
+
 <script>
 window.onload = function() {
 
@@ -22,12 +54,24 @@ window.onload = function() {
   ];
 
   var satunnainen = Math.floor(Math.random() * hevoset.length);
-  window.location.replace(hevoset[satunnainen]);
+
+  // 🌾 Rauhallinen viive (2800 ms = 2,8 sekuntia)
+  setTimeout(function() {
+    window.location.replace(hevoset[satunnainen]);
+  }, 2800);
 
 };
 </script>
 </head>
+
 <body>
-Ojennat porkkanan seuraavalle hepalle...
+
+<div class="teksti">
+  🌾 Tallilainen ojentaa porkkanan… 🥕
+  <div class="pieni">
+    Hetken kuluttua selviää, kuka sen saa.
+  </div>
+</div>
+
 </body>
 </html>
