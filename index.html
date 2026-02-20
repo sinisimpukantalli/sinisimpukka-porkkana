@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Porkkana</title>
+<script>
+window.onload = function() {
+
+  var hevoset = [
+    "https://sinisimpukantalli.webnode.fi/tinkebel/",
+    "https://sinisimpukantalli.webnode.fi/mayflower/",
+    "https://sinisimpukantalli.webnode.fi/issikka/",
+    "https://sinisimpukantalli.webnode.fi/bloodos/",
+    "https://sinisimpukantalli.webnode.fi/ceereal2/",
+    "https://sinisimpukantalli.webnode.fi/vappulan-joulukahvi/",
+    "https://sinisimpukantalli.webnode.fi/suomenhevonen/",
+    "https://sinisimpukantalli.webnode.fi/herbert/",
+    "https://sinisimpukantalli.webnode.fi/nelsons-sparrow/",
+    "https://sinisimpukantalli.webnode.fi/barones/",
+    "https://sinisimpukantalli.webnode.fi/idolola/",
+    "https://sinisimpukantalli.webnode.fi/angele/"
+  ];
+
+  var satunnainen = Math.floor(Math.random() * hevoset.length);
+  window.location.replace(hevoset[satunnainen]);
+
+};
+</script>
+</head>
+<body>
+Arvotaan hevosta...
+</body>
+</html>
